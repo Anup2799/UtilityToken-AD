@@ -1,0 +1,155 @@
+/* card styles */
+.card {
+  position: relative;
+  /* width: 400px;
+    height: 300px; */
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  box-shadow: 1px 5px 10px rgba(169, 169, 169, 0.6) !important;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* border-radius: 10px; */
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__content {
+  position: absolute;
+  top: 310px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__title {
+  font-size: 28px !important;
+  color: rgb(0, 0, 5) !important;
+  font-weight: 600 !important;
+  margin-top: -5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.card__content:hover .card__title {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.card__text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+/* .card:hover {
+  transform: translateY(-10px);
+} */
+
+.card:hover .card__image img {
+  transform: scale(1.2);
+}
+
+.card:hover .card__content {
+  transform: translateY(-65%);
+}
+
+.card__image {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  /* you can put img url here  */
+}
+
+@media screen and (max-width: 400px) {
+  /* card styles */
+  .card {
+    position: relative;
+    /* width: 400px;
+    height: 300px; */
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    box-shadow: 1px 5px 10px rgba(169, 169, 169, 0.6) !important;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* border-radius: 10px; */
+  }
+
+  .card__image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .card__content {
+    position: absolute;
+    top: 190px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .card__title {
+    font-size: 28px !important;
+    color: rgb(0, 0, 5) !important;
+    font-weight: 600 !important;
+    margin-top: -5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .card__content:hover .card__title {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .card__text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: gray;
+  }
+
+  /* .card:hover {
+  transform: translateY(-10px);
+} */
+
+  .card:hover .card__image img {
+    transform: scale(1.2);
+  }
+
+  .card:hover .card__content {
+    transform: translateY(-45%);
+  }
+
+  .card__image {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    /* you can put img url here  */
+  }
+}
