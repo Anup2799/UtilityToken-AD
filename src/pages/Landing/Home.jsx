@@ -113,8 +113,8 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("admin")}
                 sx={{
-                  width: "440px", // Adjust the width as per your requirement
-                  height: "450px", // Adjust the height as per your requirement
+                  width: "300px", // Adjust the width as per your requirement
+                  height: "320px", // Adjust the height as per your requirement
                   "&:hover": {
                     cursor: "pointer",
                   },
@@ -126,8 +126,8 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  width="90%"
-                  height="90%" // Show the full-size image
+                  width="88%"
+                  height="88%" // Show the full-size image
                   image={adminImage}
                   alt="Admin Image"
                 />
@@ -158,8 +158,8 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("customer")}
                 sx={{
-                  width: "440px", // Adjust the width as per your requirement
-                  height: "450px", // Adjust the height as per your requirement
+                  width: "300px", // Adjust the width as per your requirement
+                  height: "320px", // Adjust the height as per your requirement
                   "&:hover": {
                     cursor: "pointer",
                   },
@@ -171,8 +171,8 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  width="90%"
-                  height="90%" // Show the full-size image
+                  width="88%"
+                  height="88%" // Show the full-size image
                   image={customerImage}
                   alt="Customer Image"
                 />
