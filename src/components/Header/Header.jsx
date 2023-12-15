@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-
+ 
 //third-party Imports
 import {
   AppBar,
@@ -36,48 +36,48 @@ import {
   // useSignMessage,
   useSwitchNetwork,
 } from "wagmi";
-
+ 
 import MenuIcon from "@mui/icons-material/Menu";
-
+ 
 //project Imports
-
+ 
 const Header = () => {
   //navigation from react-router
   const navigate = useNavigate();
   const { chain } = useNetwork();
-
+ 
   //material ui theme
   const theme = useTheme();
-
+ 
   //pathname from react-router-dom
   // const { pathname } = useLocation();
-
+ 
   // media query from material ui for checking breakpoint of UI
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
+ 
   //state
   //const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [openDrawer, setOpenDrawer] = useState(false);
-
+ 
   // sign message variable
   // eslint-disable-next-line no-unused-vars
   const [message, setMessage] = React.useState();
-
+ 
   //disableing the connect from sending multiple requests
   const [connectDisable, setConnectDisable] = useState(false);
-
+ 
   //web3Modal hook
   const { open } = useWeb3Modal();
-
+ 
   //disconnect hook from wagmi
   const { disconnect } = useDisconnect();
-
+ 
   //wagmi hook for network switch
   const { error, switchNetwork } = useSwitchNetwork();
-
+ 
   //wagmi hook for accounts
   const { address, isConnected, isDisconnected, status ,} = useAccount({
-
+ 
     onDisconnect() {
       console.log("Disconnected");
       setConnectDisable(false);
@@ -107,12 +107,12 @@ const Header = () => {
     },
   });
   console.log(isDisconnected, status);
-
+ 
   //balances
   const balance = useBalance({
     address: address,
   });
-
+ 
   // if user rejected the network switch, showing until he/she connects
   useEffect(() => {
     console.log('==============================================');
@@ -125,16 +125,16 @@ const Header = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]);
-
+ 
   //chian
   useEffect(() => {
     if (chain?.id !== 80001) {
       switchNetwork?.(80001);
     }
   }, [chain, switchNetwork]);
-
+ 
   //console.log("chain detsils", chain);
-
+ 
   //handling accounts changed
   useEffect(() => {
     const handleAccountsChanged = (accounts) => {
@@ -148,7 +148,7 @@ const Header = () => {
       window.ethereum.on("accountsChanged", handleAccountsChanged);
     // window.ethereum &&
     //   window.ethereum.on("chainChanged", handleAccountsChanged);
-
+ 
     return () => {
       window.ethereum &&
         window.ethereum.removeListener(
@@ -159,11 +159,11 @@ const Header = () => {
       //   window.ethereum.removeListener("chainChanged", handleAccountsChanged);
     };
   }, [chain?.id, disconnect]);
-
+ 
   //account updates
-
+ 
   const loadingRef = useRef(null);
-
+ 
   //location
   const location = useLocation();
   const navLinkHandler = (type) => {
@@ -236,7 +236,7 @@ const Header = () => {
               >
                 LTR
               </Typography>
-
+ 
               {/* drawer start */}
               <React.Fragment>
                 <Drawer
@@ -413,5 +413,5 @@ const Header = () => {
     </React.Fragment>
   );
 };
-
+ 
 export default Header;

@@ -74,7 +74,8 @@ const Home = () => {
             color={"white"}
             className="animate__animated animate__fadeInDown"
           >
-            Welcome to Utility token Hotel hospitality Web3 Demo. Please select a persona to continue          </Typography>
+            Welcome to Utility token Hotel hospitality Web3 Demo. Please select a persona to continue
+          </Typography>
           <Grid
             rowGap={3}
             columnGap={5}
@@ -92,7 +93,6 @@ const Home = () => {
               },
             }}
           >
-            {/* Admin Card */}
             <Grid
               display={"flex"}
               justifyContent={"center"}
@@ -113,12 +113,12 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("admin")}
                 sx={{
-                  width: "400px", // Adjust the width if needed
-                  height: "400px", // Adjust the height if needed
+                  width: "440px", // Adjust the width as per your requirement
+                  height: "450px", // Adjust the height as per your requirement
                   "&:hover": {
                     cursor: "pointer",
                   },
-                  borderRadius: "50%", // Make it an oval shape
+                  borderRadius: 4,
                   backgroundColor:
                     selectedRoute === "admin" ? "lightsalmon" : "",
                   color: selectedRoute === "admin" ? "white" : "black",
@@ -126,21 +126,18 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  height="90%"
-                  width="100%"
-                  style={{ borderRadius: "80%" }} // Ensure the image is also oval
+                  width="90%"
+                  height="90%" // Show the full-size image
                   image={adminImage}
                   alt="Admin Image"
                 />
                 <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold" color="black">
+                  <Typography variant="body2" align="center" fontWeight="bold">
                     <strong>Services Manager</strong>
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
-
-            {/* Customer Card */}
             <Grid
               display={"flex"}
               justifyContent={"center"}
@@ -161,12 +158,12 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("customer")}
                 sx={{
-                  width: "400px", // Adjust the width if needed
-                  height: "400px", // Adjust the height if needed
+                  width: "440px", // Adjust the width as per your requirement
+                  height: "450px", // Adjust the height as per your requirement
                   "&:hover": {
                     cursor: "pointer",
                   },
-                  borderRadius: "50%", // Make it an oval shape
+                  borderRadius: 4,
                   backgroundColor:
                     selectedRoute === "customer" ? "lightsalmon" : "",
                   color: selectedRoute === "customer" ? "white" : "black",
@@ -174,14 +171,13 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  height="90%"
-                  width="100%"
-                  style={{ borderRadius: "80%" }} // Ensure the image is also oval
+                  width="90%"
+                  height="90%" // Show the full-size image
                   image={customerImage}
                   alt="Customer Image"
                 />
                 <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold" color="black">
+                  <Typography variant="body2" align="center" fontWeight="bold">
                     <strong>Customer</strong>
                   </Typography>
                 </CardContent>
