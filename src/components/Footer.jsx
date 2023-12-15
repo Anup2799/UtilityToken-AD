@@ -45,7 +45,7 @@ const Footer = () => {
             <Grid item>
               <Box>
                 <Typography gutterBottom variant="h4">
-                Utility token Storage
+                Luxury Token Resort Storage
                 </Typography>
                 <Stack direction={"row"}>
                   <Tooltip title="Facebook">

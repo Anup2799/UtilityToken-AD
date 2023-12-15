@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./Landing.module.css";
- 
+
 import {
   Box,
   Card,
@@ -14,22 +14,22 @@ import {
 import { NavLink, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer";
- 
+
 import background from "../../components/assets/bg.svg";
 import adminImage from "../../components/assets/Admin.png";
 import customerImage from "../../components/assets/customer.png";
 import { useState } from "react";
 import { toast } from "react-toastify";
- 
+
 const Home = () => {
   const checkAdmin = localStorage.getItem("aUser");
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
- 
+
   const [selectedRoute, setSelectedRoute] = useState(null);
   const navigate = useNavigate();
- 
+
   const handleProceed = () => {
     if (selectedRoute === "admin") {
       checkAdmin === "admin" ? navigate("/admin") : navigate("/auth/admin");
@@ -48,7 +48,7 @@ const Home = () => {
       });
     }
   };
- 
+
   return (
     <React.Fragment>
       <Box
@@ -74,8 +74,7 @@ const Home = () => {
             color={"white"}
             className="animate__animated animate__fadeInDown"
           >
-            Welcome to Utility token Hotel hospitality Web3 Demo. Please select a persona to continue
-          </Typography>
+            Welcome to Utility token Hotel hospitality Web3 Demo. Please select a persona to continue          </Typography>
           <Grid
             rowGap={3}
             columnGap={5}
@@ -93,6 +92,7 @@ const Home = () => {
               },
             }}
           >
+            {/* Admin Card */}
             <Grid
               display={"flex"}
               justifyContent={"center"}
@@ -113,11 +113,12 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("admin")}
                 sx={{
-                  width: "160px",
+                  width: "400px", // Adjust the width if needed
+                  height: "400px", // Adjust the height if needed
                   "&:hover": {
                     cursor: "pointer",
                   },
-                  borderRadius: 4,
+                  borderRadius: "50%", // Make it an oval shape
                   backgroundColor:
                     selectedRoute === "admin" ? "lightsalmon" : "",
                   color: selectedRoute === "admin" ? "white" : "black",
@@ -125,17 +126,21 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  height="auto"
+                  height="90%"
+                  width="100%"
+                  style={{ borderRadius: "80%" }} // Ensure the image is also oval
                   image={adminImage}
                   alt="Admin Image"
                 />
                 <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold">
+                  <Typography variant="body2" align="center" fontWeight="bold" color="black">
                     <strong>Services Manager</strong>
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
+
+            {/* Customer Card */}
             <Grid
               display={"flex"}
               justifyContent={"center"}
@@ -156,11 +161,12 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("customer")}
                 sx={{
-                  width: "160px",
+                  width: "400px", // Adjust the width if needed
+                  height: "400px", // Adjust the height if needed
                   "&:hover": {
                     cursor: "pointer",
                   },
-                  borderRadius: 4,
+                  borderRadius: "50%", // Make it an oval shape
                   backgroundColor:
                     selectedRoute === "customer" ? "lightsalmon" : "",
                   color: selectedRoute === "customer" ? "white" : "black",
@@ -168,12 +174,14 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  height="auto"
+                  height="90%"
+                  width="100%"
+                  style={{ borderRadius: "80%" }} // Ensure the image is also oval
                   image={customerImage}
                   alt="Customer Image"
                 />
                 <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold">
+                  <Typography variant="body2" align="center" fontWeight="bold" color="black">
                     <strong>Customer</strong>
                   </Typography>
                 </CardContent>
@@ -202,5 +210,5 @@ const Home = () => {
     </React.Fragment>
   );
 };
- 
+
 export default Home;
