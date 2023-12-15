@@ -13,8 +13,8 @@ const NotUser = () => {
         }}
       >
         <Typography gutterBottom variant="h5" textAlign={"center"}>
-          To access this service you should optin as Privilege user, Please
-          click on below button
+        To access this service, you should opt-in as a privileged user. Please
+click on the button below.
         </Typography>
         <Stack gap={2} direction={"row"} justifyContent={"center"}>
           <Button sx={{}} variant="outlined" onClick={() => navigate("/")}>
@@ -25,7 +25,7 @@ const NotUser = () => {
             variant="contained"
             onClick={() => navigate("/request-service")}
           >
-            become a Privilege user
+           become a Privileged user
           </Button>
         </Stack>
       </Container>

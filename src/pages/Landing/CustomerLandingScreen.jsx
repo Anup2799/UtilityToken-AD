@@ -62,7 +62,7 @@ const CustomerLandingScreen = () => {
             color={"white"}
             className="animate__animated animate__fadeInDown"
           >
-            Enjoy our services..
+            Enjoy our services...
           </Typography>
           <Grid
             //container

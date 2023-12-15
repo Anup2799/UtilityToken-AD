@@ -82,7 +82,7 @@ const ProtectedRoute = () => {
         </DialogTitle>
         <Divider />
         <DialogContent>
-          To protect your account and data, you’ve been automatically logged out
+        To protect your account and data, you've been automatically logged out.
         </DialogContent>
         <DialogActions>
           <Button onClick={closeBtHandler} variant="outlined" color="error">

@@ -31,7 +31,6 @@ const PrivilegeServices = () => {
       const response = await axios.get(
         "http://127.0.0.1:5000/api/v1/getUtilityTypes"
       );
-      //console.log("types response", response.data);
 
       if (response.status === 200) {
         console.log(response.data?.result);
@@ -40,7 +39,6 @@ const PrivilegeServices = () => {
     };
     fetchData();
   }, []);
-
 
   return (
     <React.Fragment>
@@ -58,12 +56,11 @@ const PrivilegeServices = () => {
             color={"white"}
             className={`animate__animated animate__fadeInDown`}
           >
-            Enjoy Privilege services..
+            Enjoy Privilege services...
           </Typography>
           <Grid container rowGap={3} pb={5}>
             {serviceTypes.length === 0 ? (
               <Grid
-                //className={`animate__animated ${getAnimate(index)}`}
                 display={"flex"}
                 justifyContent={"center"}
                 item

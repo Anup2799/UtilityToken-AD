@@ -669,7 +669,7 @@ const ServiceManager = ({ P_Type }) => {
         >
           <Grid container pb={2} >
             <Grid
-            className="animate__animated animate__fadeInLeft"
+              className="animate__animated animate__fadeInLeft"
               item
               xs={12}
               sm={12}
@@ -710,7 +710,7 @@ const ServiceManager = ({ P_Type }) => {
             </Grid>
             {privilegeTypes.length > 0 && (
               <Grid
-              className="animate__animated animate__fadeInRight"
+                className="animate__animated animate__fadeInRight"
                 item
                 xs={12}
                 sm={12}
@@ -1360,8 +1360,8 @@ const ServiceTable = ({
                     row.moreInfo === "Modify"
                       ? () => setModifyDialogOpen(true)
                       : row.moreInfo === "Minted Details"
-                      ? () => setNftDetailsDialog(true)
-                      : null
+                        ? () => setNftDetailsDialog(true)
+                        : null
                   }
                 >
                   {row.moreInfo}
