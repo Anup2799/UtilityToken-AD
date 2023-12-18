@@ -58,7 +58,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           width: "100%",
-          height: "100vh",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -113,8 +113,8 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("admin")}
                 sx={{
-                  width: "300px", // Adjust the width as per your requirement
-                  height: "320px", // Adjust the height as per your requirement
+                  width: "300px",
+                  height: "420px",
                   "&:hover": {
                     cursor: "pointer",
                   },
@@ -126,14 +126,15 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  width="88%"
-                  height="88%" // Show the full-size image
+                  width="100%"
+                  height="90%" // Adjust the height as per your requirement
                   image={adminImage}
                   alt="Admin Image"
+                  sx={{ objectFit: 'cover' }}
                 />
                 <CardContent>
                   <Typography variant="body2" align="center" fontWeight="bold">
-                    <strong>Services Manager</strong>
+                    <strong>Service Manager</strong>
                   </Typography>
                 </CardContent>
               </Card>
@@ -158,8 +159,8 @@ const Home = () => {
               <Card
                 onClick={() => setSelectedRoute("customer")}
                 sx={{
-                  width: "300px", // Adjust the width as per your requirement
-                  height: "320px", // Adjust the height as per your requirement
+                  width: "300px",
+                  height: "420px",
                   "&:hover": {
                     cursor: "pointer",
                   },
@@ -171,10 +172,11 @@ const Home = () => {
               >
                 <CardMedia
                   component="img"
-                  width="88%"
-                  height="88%" // Show the full-size image
+                  width="80%"
+                  height="90%" // Adjust the height as per your requirement
                   image={customerImage}
                   alt="Customer Image"
+                  sx={{ objectFit: 'cover' }}
                 />
                 <CardContent>
                   <Typography variant="body2" align="center" fontWeight="bold">
