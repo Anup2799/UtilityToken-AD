@@ -1,21 +1,13 @@
 import React, { useEffect } from "react";
-import styles from "./Landing.module.css";
-
 import {
   Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Divider,
   Grid,
   Typography,
   Button,
 } from "@mui/material";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer";
-
-import background from "../../components/assets/bg.svg";
 import adminImage from "../../components/assets/Admin.png";
 import customerImage from "../../components/assets/customer.png";
 import { useState } from "react";
@@ -53,10 +45,6 @@ const Home = () => {
     <React.Fragment>
       <Box
         style={{
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -71,119 +59,84 @@ const Home = () => {
             textAlign={"center"}
             variant="h5"
             p={2}
-            color={"white"}
+            color={"black"}
             className="animate__animated animate__fadeInDown"
           >
             Welcome to Utility token Hotel hospitality Web3 Demo. Please select a persona to continue
           </Typography>
           <Grid
-            rowGap={3}
-            columnGap={5}
+            container
+            spacing={2}
             sx={{
               pt: 2,
-              display: {
-                md: "flex",
-                lg: "flex",
-                xl: "flex",
-              },
-              justifyContent: {
-                md: "center",
-                lg: "center",
-                xl: "center",
-              },
+              justifyContent: "center",
             }}
           >
             <Grid
-              display={"flex"}
-              justifyContent={"center"}
               item
               xs={12}
               sm={6}
               md={6}
               lg={4}
               xl={3}
-              mb={{
-                xs: 2,
-                sm: 2,
-                md: 4,
-                xl: 4,
-                lg: 4,
-              }}
             >
-              <Card
-                onClick={() => setSelectedRoute("admin")}
+              <Box
                 sx={{
-                  width: "300px",
-                  height: "420px",
-                  "&:hover": {
-                    cursor: "pointer",
-                  },
-                  borderRadius: 4,
-                  backgroundColor:
-                    selectedRoute === "admin" ? "lightsalmon" : "",
-                  color: selectedRoute === "admin" ? "white" : "black",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
-                <CardMedia
-                  component="img"
-                  width="100%"
-                  height="90%" // Adjust the height as per your requirement
-                  image={adminImage}
-                  alt="Admin Image"
-                  sx={{ objectFit: 'cover' }}
+                <img
+                  src={adminImage}
+                  alt="Admin"
+                  style={{ width: "50%", height: "50%", borderRadius: "8px" }}
+                  onClick={() => setSelectedRoute("admin")}
                 />
-                <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold">
-                    <strong>Service Manager</strong>
-                  </Typography>
-                </CardContent>
-              </Card>
+                <Typography
+                  variant="body2"
+                  align="center"
+                  fontWeight="bold"
+                  mt={2}
+                  color={selectedRoute === "admin" ? "#f6685e" : "black"}
+                  fontSize="1.2rem"
+                >
+                  <strong>Service Manager</strong>
+                </Typography>
+              </Box>
             </Grid>
             <Grid
-              display={"flex"}
-              justifyContent={"center"}
               item
               xs={12}
               sm={6}
               md={6}
               lg={4}
               xl={3}
-              mb={{
-                xs: 2,
-                sm: 2,
-                md: 4,
-                xl: 4,
-                lg: 4,
-              }}
             >
-              <Card
-                onClick={() => setSelectedRoute("customer")}
+              <Box
                 sx={{
-                  width: "300px",
-                  height: "420px",
-                  "&:hover": {
-                    cursor: "pointer",
-                  },
-                  borderRadius: 4,
-                  backgroundColor:
-                    selectedRoute === "customer" ? "lightsalmon" : "",
-                  color: selectedRoute === "customer" ? "white" : "black",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
-                <CardMedia
-                  component="img"
-                  width="80%"
-                  height="90%" // Adjust the height as per your requirement
-                  image={customerImage}
-                  alt="Customer Image"
-                  sx={{ objectFit: 'cover' }}
+                <img
+                  src={customerImage}
+                  alt="Customer"
+                  style={{ width: "75%", height: "80%", borderRadius: "8px" }}
+                  onClick={() => setSelectedRoute("customer")}
                 />
-                <CardContent>
-                  <Typography variant="body2" align="center" fontWeight="bold">
-                    <strong>Customer</strong>
-                  </Typography>
-                </CardContent>
-              </Card>
+                <Typography
+                  variant="body2"
+                  align="center"
+                  fontWeight="bold"
+                  mt={2}
+                  color={selectedRoute === "customer" ? "#f6685e" : "black"}
+                  fontSize="1.2rem"
+                >
+                  <strong>Customer</strong>
+                </Typography>
+              </Box>
             </Grid>
           </Grid>
           <Box

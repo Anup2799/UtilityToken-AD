@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer";
 
-import background from "../../components/assets/bg.svg";
+// import background from "../../components/assets/bg.svg";
 //images
 import resturant from "../../components/assets/resturant.png";
 import ps from "../../components/assets/privilege.png";
@@ -41,7 +41,7 @@ const CustomerLandingScreen = () => {
   ];
   return (
     <React.Fragment>
-      <Box
+      {/* <Box
         style={{
           backgroundImage: `url(${background})`,
           height: {
@@ -52,7 +52,8 @@ const CustomerLandingScreen = () => {
             xl: "100vh",
           },
         }}
-      >
+      > */}
+      <Box>
         <Layout>
           <Typography
             paddingTop={"40px"}

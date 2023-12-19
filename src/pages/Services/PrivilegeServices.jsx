@@ -16,7 +16,7 @@ import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer";
 import { useAccount } from "wagmi";
 import axios from "axios";
-import background from "../../components/assets/bg.svg";
+// import background from "../../components/assets/bg.svg";
 
 import ps from "../../components/assets/privilege.png";
 const PrivilegeServices = () => {
@@ -42,11 +42,12 @@ const PrivilegeServices = () => {
 
   return (
     <React.Fragment>
-      <Box
+      {/* <Box
         style={{
           backgroundImage: `url(${background})`,
         }}
-      >
+      > */}
+      <Box>
         <Layout>
           <Typography
             paddingTop={"40px"}

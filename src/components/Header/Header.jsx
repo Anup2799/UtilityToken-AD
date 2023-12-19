@@ -320,13 +320,13 @@ const Header = () => {
                     flexDirection: "column",
                   }}
                 >
-                   Utility Token Resort
+                   LuxToken Resort
                   <span
                     style={{
                       fontSize: "10px",
                       position: "absolute",
                       top: "65px",
-                      left: "22px",
+                      left: "12px",
                     }}
                   >
                     Experience Hospitality, Where Every Stay Counts
